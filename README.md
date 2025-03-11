@@ -34,8 +34,19 @@ pipenv run pytest
 ```
 
 ### PyPi Package
+
+Clean setup twine
+
+```
+pip install --upgrade pip setuptools wheel twine build
+rm -rf dist/ build/ *.egg-info
+```
+
 Build and publish to PyPi
 ```
+pip install --upgrade build
+python -m build
+
 pipenv install build twine
 pipenv run python -m build
 pipenv run twine upload dist/*
