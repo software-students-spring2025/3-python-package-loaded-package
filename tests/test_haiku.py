@@ -1,5 +1,5 @@
 import pytest
-from commit_message_generator.haiku import haiku_commit
+from commitmessage.haiku import haiku_commit
 
 def test_haiku_basic_structure():
     """Test that haiku has correct structure (3 lines)."""

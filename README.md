@@ -21,7 +21,7 @@ CommitMessageGenerator is a fun Python package to generate creative, funny, or t
 6. As a developer giving a presentation, I want to show an entertaining git log that will engage my audience.
 7. As an open source contributor, I want to create dramatic commit messages to highlight the importance of my contributions.
 
-### Initial setup
+### Development environment setup
 
 Create Virtual environment and activate
 ```
@@ -29,16 +29,15 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-Install and setup pipenv
+Install pipenv
 ```
 pip install pipenv
-pipenv --python 3.9
 ```
 
 Install and run unit tests
 ```
 pipenv install pytest
-pipenv run pytest
+pytest
 ```
 
 ### PyPi Package
@@ -64,5 +63,5 @@ pipenv run twine upload dist/*
 
 ### How to run
 ```
-pip install commit_message_generator
+pip install commitmessage
 ```
