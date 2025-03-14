@@ -1,5 +1,5 @@
 import pytest
-from commit_message_generator.style import style_commit
+from commitmessage.style import style_commit
 
 def test_style_pirate_strength_1():
     """Test style_commit with pirate style and strength 1."""

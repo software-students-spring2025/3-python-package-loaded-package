@@ -3,7 +3,7 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "commit_message_generator"
+name = "commitmessage"
 version = "0.1.0"
 description = "Generate creative, funny, or themed git commit messages"
 authors = [{name = "Your Name", email = "your.email@example.com"}]

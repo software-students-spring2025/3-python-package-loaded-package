@@ -64,5 +64,5 @@ pipenv run twine upload dist/*
 
 ### How to run
 ```
-pip install commit_message_generator
+pip install commitmessage
 ```
