@@ -57,11 +57,50 @@ python -m build
 pipenv install build twine
 pipenv run python -m build
 pipenv run twine upload dist/*
-
-
 ```
+
+### Link to PyPI website
+
 
 ### How to run
 ```
 pip install commitmessage
 ```
+
+### Package contents
+
+
+#### drama.py
+This function dramatizes commit messages by adding exaggerated excitement based on the type of commit (feature, fix, docs, refactor, test) and an intensity level (1-3).
+Higher intensity levels make the messages louder and more enthusiastic.
+
+
+#### emoji.py
+Enhances commit messages by adding relevant emojis based on the commit category.
+The intensity parameter determines how many emojis are added.
+Covers a broad range of categories, including feature, fix, docs, refactor, test, style, chore, and more.
+
+
+#### haiku.py
+Transforms commit messages into haikus.
+Uses a theme (nature, tech, or emotion) to generate a poetic commit message.
+Optionally incorporates filenames that were changed.
+
+
+#### style.py
+Converts commit messages into fun, thematic styles such as pirate, superhero, medieval, sci-fi, noir, and western.
+Uses a strength parameter (1-3) to determine the intensity of the transformation.
+Replaces key words in the message with thematic equivalents and adds an appropriate prefix.
+
+
+### Unit testing
+Each unit test file corresponds to an individual file.
+* test_drama.py -> drama.py
+* test_emoji.py -> emoji.py
+* test_haiku.py -> haiku.py
+* test_style.py -> style.py
+
+
+### Environment variables
+We don't have any exclusive environment variables for this project
+Nor do we have a .env file
