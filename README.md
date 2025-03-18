@@ -45,26 +45,29 @@ pytest
 Clean setup twine
 
 ```
-pip install --upgrade pip setuptools wheel twine build
+
 rm -rf dist/ build/ *.egg-info
 ```
 
 Build and publish to PyPi
 ```
-pip install --upgrade build
+pip install build
 python -m build
 
-pipenv install build twine
-pipenv run python -m build
-pipenv run twine upload dist/*
+pip install twine
+twine upload dist/*
 ```
 
 ### Link to PyPI website
-
+[commitmessage · PyPI](https://pypi.org/project/commitmessage/0.1.0/)
 
 ### How to run
 ```
 pip install commitmessage
+
+from commitmessage.emoji import emoji_commit
+result = emoji_commit("Fix critical bug", "fix", 2)
+print(result)
 ```
 
 ### Package contents
