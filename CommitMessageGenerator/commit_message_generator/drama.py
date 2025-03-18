@@ -1,4 +1,4 @@
-def drama_commit(message, category, intensity):
+def drama_commit(message, category='feature', intensity=1):
     """
     Turn boring commit messages into dramatic ones based on category and with variable intensity.
     
@@ -10,6 +10,7 @@ def drama_commit(message, category, intensity):
     Returns:
         str: Dramatized commit message
     """
+    
     if not isinstance(message, str) or not message:
         raise ValueError("Commit message must be a non-empty string")
     
