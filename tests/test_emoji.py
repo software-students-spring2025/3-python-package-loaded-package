@@ -1,5 +1,5 @@
 import pytest
-from commitmessage.emoji import emoji_commit
+from commitmessage import *
 
 def test_emoji_feature_intensity_1():
     """Test emoji_commit with feature category and intensity 1."""

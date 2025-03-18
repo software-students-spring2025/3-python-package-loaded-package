@@ -6,6 +6,11 @@ build-backend = "setuptools.build_meta"
 name = "commitmessage"
 version = "0.1.0"
 description = "Generate creative, funny, or themed git commit messages"
-authors = [{name = "Your Name", email = "your.email@example.com"}]
+authors = [
+    {name = "Johnny Ding", email = "yd2960@example.com"},
+    {name = "Brian Zou"},
+    {name = "Cyryl Zhang"},
+    {name = "Josh Lavroff"},
+]
 license = {text = "MIT"}
 dependencies = []
