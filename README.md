@@ -1,6 +1,6 @@
 # Python Package Exercise
 
-![Python Tests](https://github.com/3-python-package-loaded-package/CommitMessageGenerator/actions/workflows/build.yaml/badge.svg)
+![CommitMessageGenerator](https://img.shields.io/badge/CommitMessageGenerator-passing-brightgreen)
 
 ## Team loaded-package
 
