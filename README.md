@@ -59,15 +59,14 @@ twine upload dist/*
 ```
 
 ### Link to PyPI website
-[commitmessage · PyPI](https://pypi.org/project/commitmessage/0.1.0/)
+[commitmessage · PyPI](https://pypi.org/project/commitmessage/0.2.0/)
 
 ### How to run
 ```
 pip install commitmessage
 
-from commitmessage.emoji import emoji_commit
-result = emoji_commit("Fix critical bug", "fix", 2)
-print(result)
+from commitmessage import emoji_commit
+print(emoji_commit("Fix critical bug", "fix", 2))
 ```
 
 ### Package contents

@@ -16,41 +16,47 @@ def drama_commit(message, category='feature', intensity=1):
     if not isinstance(intensity, int) or intensity < 1 or intensity > 3:
         raise ValueError("Intensity must be between 1 and 3")
     
-    match category.lower():
-        case 'feature':
-            if intensity==1:
-                return 'Check out this new feature! '+ message
-            if intensity==2:
-                return 'Wow! Check out this amazing new feature! '+message
-            return 'WOOOOOOOOO!!!! THIS NEW FEATURE IS AMAZING!!!!! '+message.upper()+'!!!!'
-        
-        case 'fix':
-            if intensity==1:
-                return 'I fixed a bug! '+message
-            if intensity==2:
-                return 'Yay! Squashed a bug! '+message
-            return 'A BUG HAS BEEN ERADICATED!!!!! '+message.upper()+'!!!!'
-        
-        case 'docs':
-            if intensity==1:
-                return 'Made some documentation improvements! '+message
-            if intensity==2:
-                return 'Spruced up the documentation! Check it out! '+message
-            return 'OUR DOCUMENTATION IS SO MUCH BETTER NOW THANKS TO ME!!!! '+message.upper()+'!!!!'
-        
-        case 'refactor':
-            if intensity==1:
-                return 'Refactored some code! '+message
-            if intensity==2:
-                return 'Check out this refactored code! '+message
-            return 'I CANT BELIEVE HOW MUCH BETTER THIS REFACTORED CODE IS!!!!! '+message.upper()+'!!!!'
-        
-        case 'test':
-            if intensity==1:
-                return 'Added some new tests! '+message
-            if intensity==2:
-                return 'Improved our coverage with some new tests! '+message
-            return 'OUR CODE IS COVERED NOW THANKS TO THESE TESTS!!!! '+message.upper()+'!!!!'
-        
-        case _:
-            raise ValueError("Category must be one of the following: feature, fix docs, refactor, test")
+    category_lower = category.lower()
+    
+    if category_lower == 'feature':
+        if intensity == 1:
+            return 'Check out this new feature! ' + message
+        elif intensity == 2:
+            return 'Wow! Check out this amazing new feature! ' + message
+        else:
+            return 'WOOOOOOOOO!!!! THIS NEW FEATURE IS AMAZING!!!!! ' + message.upper() + '!!!!'
+    
+    elif category_lower == 'fix':
+        if intensity == 1:
+            return 'I fixed a bug! ' + message
+        elif intensity == 2:
+            return 'Yay! Squashed a bug! ' + message
+        else:
+            return 'A BUG HAS BEEN ERADICATED!!!!! ' + message.upper() + '!!!!'
+    
+    elif category_lower == 'docs':
+        if intensity == 1:
+            return 'Made some documentation improvements! ' + message
+        elif intensity == 2:
+            return 'Spruced up the documentation! Check it out! ' + message
+        else:
+            return 'OUR DOCUMENTATION IS SO MUCH BETTER NOW THANKS TO ME!!!! ' + message.upper() + '!!!!'
+    
+    elif category_lower == 'refactor':
+        if intensity == 1:
+            return 'Refactored some code! ' + message
+        elif intensity == 2:
+            return 'Check out this refactored code! ' + message
+        else:
+            return 'I CANT BELIEVE HOW MUCH BETTER THIS REFACTORED CODE IS!!!!! ' + message.upper() + '!!!!'
+    
+    elif category_lower == 'test':
+        if intensity == 1:
+            return 'Added some new tests! ' + message
+        elif intensity == 2:
+            return 'Improved our coverage with some new tests! ' + message
+        else:
+            return 'OUR CODE IS COVERED NOW THANKS TO THESE TESTS!!!! ' + message.upper() + '!!!!'
+    
+    else:
+        raise ValueError("Category must be one of the following: feature, fix, docs, refactor, test")
