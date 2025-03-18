@@ -62,11 +62,17 @@ twine upload dist/*
 [commitmessage · PyPI](https://pypi.org/project/commitmessage/0.2.0/)
 
 ### How to run
+See [example.py](example.py)
 ```
-pip install commitmessage
+from commitmessage import *
 
-from commitmessage import emoji_commit
 print(emoji_commit("Fix critical bug", "fix", 2))
+print("---------------")
+print(haiku_commit("Update API endpoint", theme="tech"))
+print("---------------")
+print(style_commit("Update user profile", "medieval", 3))
+print("---------------")
+print(drama_commit("Add new login page", "feature", 3))
 ```
 
 ### Package contents
