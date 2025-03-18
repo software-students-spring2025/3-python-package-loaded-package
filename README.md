@@ -1,5 +1,7 @@
 # Python Package Exercise
 
+![Python Tests](https://github.com/3-python-package-loaded-package/CommitMessageGenerator/actions/workflows/build.yaml/badge.svg)
+
 ## Team loaded-package
 
 ### Members
