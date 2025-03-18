@@ -1,15 +1,15 @@
 import pytest
 from commitmessage.drama import drama_commit
 
-def test_drama_feature_intensity_3():
+def test_drama_feature_intensity_1():
     """Test drama_commit with feature category and intensity 1."""
     result = drama_commit("Add new login page", "feature", 1)
     assert "Check out this new feature!" in result
     assert "Add new login page" in result
 
-def test_drama_feature_intensity_1():
+def test_drama_feature_intensity_2():
     """Test drama_commit with feature category and intensity 2."""
-    result = drama_commit("Add new login page", "feature", 1)
+    result = drama_commit("Add new login page", "feature", 2)
     assert "Wow! Check out this amazing new feature!" in result
     assert "Add new login page" in result
 
@@ -17,7 +17,7 @@ def test_drama_feature_intensity_3():
     """Test drama_commit with feature category and intensity 3."""
     result = drama_commit("Add new login page", "feature", 3)
     assert "WOOOOOOOOO" in result
-    assert "Add new login page" in result
+    assert "ADD NEW LOGIN PAGE" in result
     assert result.count("!") == 13
 
 def test_drama_invalid_intensity():
